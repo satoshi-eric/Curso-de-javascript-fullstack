@@ -1,0 +1,9 @@
+Para commitar, usar a seguinte sintaxe:
+<pasta 1>: <arquivo 1> -> <pasta 2>: <arquivo 2>
+primeiro arquivo criado -> último arquivo criado
+
+Se o primeiro arquivo criado depois do último commit for first.js e estiver em pasta1 e 
+o último arquivo criado antes de fazer o próximo commit for last.js e estiver na pasta pasta1,
+então a sintaxe fica assim:
+
+pasta1: first.js -> pasta1: last.js
