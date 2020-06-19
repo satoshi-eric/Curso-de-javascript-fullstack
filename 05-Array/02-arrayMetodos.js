@@ -1,9 +1,9 @@
 const pilotos = ['Vettel', 'Alonso', 'Raikkonen', 'Massa']
 
-pilotos.pop() // massa quebrou ocarro!
+pilotos.pop() // massa quebrou ocarro! remove último elemento
 console.log(pilotos)
 
-pilotos.push('Verstappen')
+pilotos.push('Verstappen') // adiciona ao último elemento
 console.log(pilotos)
 
 pilotos.shift() // remove o primeiro
