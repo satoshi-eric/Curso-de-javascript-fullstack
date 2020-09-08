@@ -1,4 +1,5 @@
 /* map transforma um array em outro com o mesmo tamanho */
+// map aplica uma função à todos os elementos de um array
 
 /* array de numeros */
 const nums = [1, 2, 3, 4, 5]
