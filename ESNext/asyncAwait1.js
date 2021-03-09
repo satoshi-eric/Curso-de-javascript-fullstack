@@ -22,14 +22,23 @@ function retornarValor() {
 }
 
 async function executar() {
-    await esperarPor(1500)
-    console.log('Async/Await 1...')
+    let valor = await retornarValor()
 
     await esperarPor(1500)
-    console.log('Async/Await 2...')
+    console.log(`Async/Await ${valor}...`)
+
+    await esperarPor(1500)
+    console.log(`Async/Await ${valor + 1}...`)
     
     await esperarPor(1500)
-    console.log('Async/Await 3...')
+    console.log(`Async/Await ${valor + 2}...`)
+
+    return valor + 3
 }
 
-    executar()
+async function executarDeVerdade() {
+    const valor = await executar()
+    console.log(valor)
+}
+
+executar().then(console.log)

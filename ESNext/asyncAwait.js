@@ -1,5 +1,4 @@
 const http = require('http')
-const { resolve } = require('path')
 
 const getTurma = letra => {
     const url = `http://files.cod3r.com.br/curso-js/turma${letra}.json`
