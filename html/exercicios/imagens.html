@@ -1,0 +1,115 @@
+<div wm-slider>
+    
+    <p>
+        <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" 
+        alt="Muro da cidade" 
+        width="513" height="342" 
+        title="">
+    </p>
+    
+    <p>
+        <img src="http://files.cod3r.com.br/curso-web/imagem2.gif" 
+        alt="Muro da cidade" 
+        width="513" height="342" 
+        title="Muro da cidade de Tarso Bessa">
+    </p>
+    
+    <p class="circular">
+        <img src="http://files.cod3r.com.br/curso-web/imagem3.png" 
+        alt="Luffy" height=342>
+    </p>
+    
+    <p class="texto">
+        <img src="http://files.cod3r.com.br/curso-web/avatar.jpg" 
+        alt="" height="50" align="left">
+        fsdfdsfd fds fsd f dsf ds fds fdsfdsfds  fsd fdsfsdf  
+        fds dsadsadsad dsadsadsad ddsadsadsadsad ddsadsadsadsad
+        dksaldksaçldsa dsdasdsadsa dsaddsadsad dsadsadsad dsadsadsad
+        dsadasdsad dsadsadsad dsadsdsdsa dsadsadsadas dsadsadsadas 
+        dsadsadsadsad dsaddsa dsadsada ds ad sadsadsad das dsa d
+        fdsfdsfdsfds 
+    </p>
+    
+    <p class="cidade"></p>
+    
+    <p>
+        <picture>
+            <source srcset="http://files.cod3r.com.br/curso-web/logo-larga.png" 
+            media="(min-width: 600px)">
+            <img src="http://files.cod3r.com.br/curso-web/logo-estreita.png" alt="Logo">
+        </picture>
+    </p>
+</div>
+
+
+<style>
+    p {
+        position: absolute;
+        display: none;
+    }
+
+    .circular {
+        width: 513px;
+        background-color: #444;
+    }
+
+    .texto {
+        width: 400px;
+
+    }
+    
+    .texto img {
+        margin-right: 10px;
+    }
+
+    .cidade {
+        width: 513px;
+        height: 342px;
+        background-image: url(https://mugiwarasoficial.com/wp-content/uploads/2021/08/One-Piece-Wano-.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+</style>
+
+<script>
+    function mover(elem, inicio, fim, passo, callback) {
+        const novoInicio = inicio - passo
+        if (novoInicio >= fim) {
+            elem.style.left = novoInicio + 'px'
+            setTimeout(() => mover(elem, novoInicio, fim, passo, callback), 7)
+        } else {
+            callback()
+        }
+    }
+
+    // const p = document.querySelector('[wm-slider] > p')
+    // p.style.display = 'block'
+    // mover(p, 1500, -520, 5, () => {
+    //     console.log("terminou")
+    // })
+
+    function slider() {
+        const elementos = document.querySelectorAll('[wm-slider] > p')
+        const slides = Array.from(elementos)
+        exibirSlides(slides, slides[0])
+    }
+
+    function exibirSlides(slides, slide) {
+        slide.style.display = 'block'
+        const inicio = innerWidth
+        const fim = -slide.clientWidth
+        slide.style.left = `${inicio}px`
+        mover(slide, inicio, fim, 5, () => {
+            slide.style.displa = "none"
+            exibirSlides(slides, getProximo(slides, slide))
+        })
+    }
+
+    function getProximo(lista, atual) {
+        const index = lista.indexOf(atual)
+        return lista[index + 1] || lista[0]
+    }
+
+    slider()
+</script>
