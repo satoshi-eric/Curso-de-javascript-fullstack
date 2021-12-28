@@ -10,12 +10,16 @@ const colors = {
     main: '#00acc1',
     footer: '#304ffe',
     form: '#43a047',
-    
+    body: '#e53935',
+    padrao: '#f44336',
+    get(tag) {
+        return this[tag] ? this[tag] : this.padrao;
+    }
 }
 
 document.querySelectorAll('.tag').forEach(elemento => {
     const tagName = elemento.tagName.toLowerCase()
-    elemento.style.borderColor = '#616161'
+    elemento.style.borderColor = colors.get(tagName)
     if (!elemento.classList.contains('no-label')) {
         const label = document.createElement('label')
         label.style.backgroundColor = '#616161'
