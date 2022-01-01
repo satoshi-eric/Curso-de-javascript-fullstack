@@ -6,7 +6,69 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        /* 
+            *
+            elemento
+            .class
+            #ID
+            [atributo]
+            :pseudo-class
+            ::pseudo-elementos
+            
+            Combinar seletores
+            div + p -> irmãos adjacentes
+            div ~ p -> irmãos 
+            div > p -> filhos
+            div p   -> descendentes
+        */
+        * {
+            color: #ff0;
+            background-color: #f77;
+        }
+        .tag {
+            color: blue;
+            background-color: yellow;
+        }
+        #aprovados {
+            color: red;
+            background-color: green;
+        }
+        #aninhado > div {
+            color: #f00;
+            background-color: #0f0;
+        }
+        p + ol {
+            color: #9f3;
+            background-color: blueviolet;
+        }
+        p ~ ol {
+            color: chocolate;
+            background-color: coral;
+        }
+        [feira] {
+            color: darkgreen;
+            background-color: darkgoldenrod;
+        }
+        [feira=casa] {
+            color: aqua;
+            background-color: aquamarine;
+        }
+        [feira*=sa] {
+            color: chartreuse;
+            background-color: darkcyan;
+        }
+        section > :nth-child(odd) {
+            color: darkmagenta;
+            background-color: darkolivegreen;
+        }
+        section > :nth-child(odd), ul {
+            color: darkmagenta;
+            background-color: darkolivegreen;
+        }
+        section > span:nth-of-type(2) {
+            color: darkorange;
+            background-color: darkorchid;
+        }
     </style>
 </head>
 
