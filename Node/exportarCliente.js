@@ -1,2 +1,2 @@
-const exportar = require('./04-exportar')
+const exportar = require('./exportar')
 console.log(exportar)

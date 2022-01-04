@@ -1,5 +1,5 @@
 /* Caminho relativo */
-const moduloA = require('../../01-moduloA')
+const moduloA = require('../../moduloA')
 /* Caminho absoluto */
 // const moduloA = require('C:/Users/satos/Documents/GitHub/Curso-de-javascript-fullstack/06-Node/01-moduloA.js')
 console.log(moduloA)
