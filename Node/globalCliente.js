@@ -1,4 +1,4 @@
-require('./07-global')
+require('./global')
 
 console.log(MinhaApp.saudacao())
 

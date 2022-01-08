@@ -1,8 +1,8 @@
-const contadorA = require('./06-intanciaUnica')
-const contadorB = require('./06-intanciaUnica')
+const contadorA = require('./intanciaUnica')
+const contadorB = require('./intanciaUnica')
 
-const contadorC = require('./06-instanciaNova')()
-const contadorD = require('./06-instanciaNova')()
+const contadorC = require('./instanciaNova')()
+const contadorD = require('./instanciaNova')()
 
 contadorA.inc()
 contadorA.inc()

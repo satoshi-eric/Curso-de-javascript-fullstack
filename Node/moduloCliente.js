@@ -1,7 +1,7 @@
 /* Para importar módulos, é necessário usar o ./ referenciando que o arquivo importado está na mesma pasta do arquivo que utiliza o arquivo importado*/
 /* Não é necessário colocar a extensão, mas é possível usá-la */
-const moduloA = require('./01-moduloA')
-const moduloB = require('./01-moduloB')
+const moduloA = require('./moduloA')
+const moduloB = require('./moduloB')
 
 console.log(moduloA.ola)
 console.log(moduloA.bemVindo)
